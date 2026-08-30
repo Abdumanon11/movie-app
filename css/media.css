@@ -1,0 +1,281 @@
+html {
+	min-width: 320px;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+main {
+	padding: 20px clamp(16px, 4vw, 40px) 40px;
+}
+
+.movie-container {
+	width: min(100%, 1200px);
+}
+
+.movies-grid {
+	grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+}
+
+.modal {
+	width: min(1100px, calc(100vw - 48px));
+	max-width: none;
+	max-height: calc(100dvh - 48px);
+	height: auto;
+}
+
+.box-modal-info {
+	min-width: 0;
+}
+
+@media (max-width: 900px) {
+	header {
+		padding: 24px 16px 12px;
+	}
+
+	header h1 {
+		font-size: clamp(30px, 5vw, 42px);
+	}
+
+	.search-box {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.search-box input {
+		min-width: 0;
+		grid-column: 1 / -1;
+		grid-row: 1;
+	}
+
+	.search-box button {
+		grid-column: 2;
+		grid-row: 2;
+		width: 100%;
+	}
+
+	.search-box select,
+	.favorites-btn {
+		min-width: 0;
+		width: 100%;
+	}
+
+	.search-box select:first-child {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	#sort-filter {
+		grid-column: 1;
+		grid-row: 3;
+	}
+
+	.favorites-btn {
+		grid-column: 2;
+		grid-row: 3;
+	}
+
+	.modal {
+		gap: 16px;
+		padding: 18px;
+	}
+
+	.modal-poster {
+		width: 230px;
+		height: 345px;
+	}
+
+	.box-modal-info {
+		padding: 16px;
+	}
+
+	.modal-on p,
+	.modal-on span {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 600px) {
+	main {
+		padding: 12px 12px 28px;
+	}
+
+	.search-box {
+		gap: 8px;
+		margin: 16px 0 22px;
+	}
+
+	.search-box input,
+	.search-box select,
+	.search-box button,
+	.favorites-btn {
+		height: 52px;
+	}
+
+	.search-box input {
+		font-size: 16px;
+		padding: 12px 14px;
+	}
+
+	.search-box select {
+		padding: 0 34px 0 12px;
+		font-size: 14px;
+		background-position: calc(100% - 16px) 22px, calc(100% - 10px) 22px;
+	}
+
+	.favorites-btn {
+		padding: 0 10px;
+		font-size: 14px;
+	}
+
+	.movies-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+	}
+
+	.movie-card img,
+	.poster-placeholder {
+		height: auto;
+		aspect-ratio: 2 / 3;
+	}
+
+	.movie-card h3 {
+		padding: 11px 8px 5px;
+		font-size: 15px;
+		line-height: 1.25;
+		overflow-wrap: anywhere;
+	}
+
+	.movie-info {
+		padding: 6px 8px 10px;
+	}
+
+	.movie-meta {
+		gap: 4px;
+		font-size: 12px;
+	}
+
+	.load-more-btn {
+		width: 100%;
+		margin-top: 24px;
+	}
+
+	.reyting {
+		padding: 4px 6px;
+		white-space: nowrap;
+	}
+
+	.favorit {
+		top: 7px;
+		right: 7px;
+		width: 36px;
+		height: 36px;
+	}
+
+	.favorit::before {
+		font-size: 23px;
+	}
+
+	.modal {
+		width: calc(100vw - 20px);
+		max-height: calc(100dvh - 20px);
+		flex-direction: column;
+		align-items: stretch;
+		gap: 10px;
+		padding: 12px;
+		border-radius: 14px;
+	}
+
+	.modal-poster {
+		align-self: center;
+		width: min(48vw, 180px);
+		height: auto;
+		aspect-ratio: 2 / 3;
+		border-radius: 12px;
+		transform: none;
+	}
+
+	.box-modal-info {
+		max-height: none;
+		overflow: visible;
+		padding: 12px;
+	}
+
+	.modal-on h1 {
+		padding-right: 34px;
+		font-size: 22px;
+		line-height: 1.2;
+		overflow-wrap: anywhere;
+	}
+
+	.modal-on p,
+	.modal-on span {
+		font-size: 14px;
+		line-height: 1.5;
+		margin-bottom: 10px;
+	}
+
+	.box-modal-date {
+		flex-wrap: wrap;
+		gap: 6px 12px;
+	}
+
+	.modal-genres span {
+		display: inline-block;
+		padding: 5px 6px;
+		margin: 2px;
+	}
+
+	.modal-cast {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.actor-card {
+		width: 100%;
+		height: auto;
+		min-height: 250px;
+		padding: 8px;
+	}
+
+	.actor-card img {
+		width: min(100%, 110px);
+		height: auto;
+		aspect-ratio: 7 / 10;
+	}
+
+	.close-modal {
+		top: 10px;
+		right: 10px;
+		width: 34px;
+		height: 34px;
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 380px) {
+	.search-box {
+		grid-template-columns: 1fr;
+	}
+
+	.search-box select:first-child,
+	#sort-filter,
+	.search-box button,
+	.favorites-btn {
+		grid-column: 1;
+		grid-row: auto;
+	}
+
+	.movies-grid {
+		gap: 8px;
+	}
+
+	.movie-card h3 {
+		font-size: 14px;
+	}
+
+	.movie-meta {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/favorites.css">
+    <link rel="stylesheet" href="/css/media.css">
+    <title> 🎬 Movie favorites </title>
+</head>
+<body>
+<header>
+    <h1> 🎬 Movie favorites </h1>
+</header>
+<main>
+    <section class="movie-container">
+        <a href="/index.html" class="back-btn">← Вернуться к популярным фильмам</a>
+
+        <div class="movies-grid"></div>
+
+    </section>
+</main>
+<div class="box-modal">
+    <div class="modal">
+        <div class="modal-backdrop"></div>
+        <button class="close-modal">✖</button>
+        <img class="modal-poster" src="" alt="Постер фильма">
+        <div class="box-modal-info">
+            <p class="modal-loading">Загрузка...</p>
+            <h1 class="modal-title"></h1>
+            <p class="modal-slogan"></p>
+            <div class="box-modal-date">
+                <p class="modal-vote-average"></p>
+                <p class="modal-release-date"></p>
+                <p class="modal-runtime"></p>
+            </div>
+            <div class="modal-genres">
+                <p class="modal-genre"></p>
+            </div>
+            <p class="modal-overview"></p>
+            <p class="modal-director"></p>
+            <div class="modal-cast"></div>
+        </div>
+    </div>
+</div>
+
+    <script type="module" src="js/favorites-app.js"></script>
+</body>
+</html>
